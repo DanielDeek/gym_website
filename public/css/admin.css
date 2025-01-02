@@ -1,0 +1,249 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    /* height: 100vh; */
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    height: 100%;
+    /* overflow-y: auto; */
+    transition: width 0.3s ease;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    flex: 1;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: margin-left 0.3s ease;
+}
+
+.sidebar h2{
+    color: #ffc107;
+    font-size: 2rem;
+}
+
+.sidebar span{
+    color: #ffc107;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 15px 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.sidebar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffc107;
+    width: 100%;
+    height: 100%;
+}
+.sidebar ul li:hover {
+    background-color: #ffc107;
+    font-weight: bold;
+}
+
+.sidebar ul li:hover a{
+    color: #fff;
+}
+.sidebar ul li:hover span{
+    color: #fff;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.stat-card {
+    background-color: #ffc107;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+}
+
+.stat-card:hover{
+    transform: translateY(-10%);
+}
+
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling */
+    width: 100%; /* Ensures the container fits the screen */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th, table td {
+    padding: 5px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f2f2f2;
+}
+
+.buttons{
+   display: flex;
+   justify-content: center;
+   gap: 10px;
+}
+
+.button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.button.danger {
+    padding: 8px 16px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.button.danger:hover{
+    background-color: #fa7a87;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+span{
+    color: red;
+    font-weight: bold;
+    padding-top: 5px;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.search-input {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+}
+
+.pagination {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.pagination a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #007BFF;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.pagination .active a {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 80px; /* Shrink sidebar */
+        padding: 0;
+    }
+
+    .sidebar h2 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .sidebar ul li{
+        padding: 10px 0;
+    }
+    .sidebar ul li a {
+        text-align: center; /* Center the icons */
+        font-size: 1.2rem;
+    }
+
+    .sidebar ul li a i {
+        font-size: 1rem; /* Increase icon size */
+        padding: 0;
+    }
+
+    .sidebar ul li a span {
+        display: none; /* Hide text in links */
+    }
+
+    .content {
+        margin-left: 80px;
+    }
+}
+
+
+
+
