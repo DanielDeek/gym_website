@@ -24,7 +24,7 @@ class FooterController extends Controller
             'description' => 'nullable|string',
             'address' => 'nullable|string|max:255',
             'phone' => 'nullable|string|max:10',
-            'email' => 'nullable|email|unique:users,email',
+            'email' => 'nullable|email',
         ]);
 
         Footer::create($validated);
@@ -44,7 +44,7 @@ class FooterController extends Controller
             'description' => 'nullable|string',
             'address' => 'nullable|string|max:255',
             'phone' => 'nullable|string|max:10',
-            'email' => 'nullable|email|unique:users,email',
+            'email' => 'nullable|email',
         ]);
 
         $footer->update($validated);

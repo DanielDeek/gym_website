@@ -4,7 +4,10 @@
     <div class="users">
         <h1>Manage Members</h1>
         <a href="{{ route('admin.members.create') }}" class="button">Add New Member</a>
-
+        <form method="GET" action="{{ route('admin.members.index') }}" class="search-form">
+            <input type="text" name="search" placeholder="Search members..." value="{{ request('search') }}">
+            <button type="submit" class="button">Search</button>
+        </form>
         <div class="table-container">
             <table>
                 <thead>

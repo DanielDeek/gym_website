@@ -9,9 +9,20 @@ use Illuminate\Support\Facades\Log;
 
 class MemberClassController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $memberClasses = MemberClass::with('class')->get();
+        $query = MemberClass::query();
+
+        if ($request->has('search') && !empty($request->search)) {
+            $search = $request->search;
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%$search%");
+            });
+        }
+
+        $memberClasses = $query->get();
+
         return view('admin.memberClass.index',compact('memberClasses'));
     }
 
