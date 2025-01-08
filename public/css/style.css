@@ -764,13 +764,13 @@ span{
 
 .register-container {
     display: flex;
-    width: 90%;
-    max-width: 1200px;
+    /* flex-direction: column; */
+    width: 100%;
     background-color: #ffc107;
     border-radius: 10px;
-    overflow: hidden;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     margin-top: 30px;
+    /* padding: 20px; */
 }
 
 /* Welcome Section */
@@ -812,7 +812,7 @@ span{
 /* Registration Form */
 .register-form {
     flex: 1;
-    padding: 5%;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -850,7 +850,7 @@ span{
 
 .submit-btn {
     width: 100%;
-    padding: 15px 20px;
+    padding: 12px 15px;
     background-color: #ff6f61;
     color: #fff;
     font-size: 16px;
@@ -941,7 +941,7 @@ span{
 /* Login Form */
 .login-form {
     flex: 1;
-    padding: 5%;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
